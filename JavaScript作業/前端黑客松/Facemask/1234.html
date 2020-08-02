@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        functioneqfeed_callback(FacemaskObject); {
+            for (leti = 0; i < 10; i++) {
+                letcoords = FacemaskObject.features[i].geometry.coordinates;
+
+                console.log(coords[1], coords[0])
+                letlatLng = newgoogle.maps.LatLng(coords[1], coords[0]);
+                console.log(latLng)
+
+                // if (FacemaskObject.features[i].properties.masksLeft == 0 && FacemaskObject.features[i].properties.childMasksLeft == 0) {
+                marker = newgoogle.maps.Marker({
+                    position: latLng,
+                    map: map,
+                    icon: icon2,
+                    title: '藥局名稱:' + FacemaskObject.features[i].properties.name
+                });
+                // }
+                // else {
+                //     marker = new google.maps.Marker({
+                //         position: latLng,
+                //         map: map,
+                //         icon: icon1,
+                //         title: '藥局名稱:' + FacemaskObject.features[i].properties.name
+                //     });
+                //     marker.addListener('click', function () {
+                //         infowindow.open(map, marker);
+                //         console.log(marker.position);
+                //     });
+                // }
+                aa(marker)
+            }
+            function aa(marker) {
+                let contentString = '<div id="name">' + '醫院名稱:' + '</div>' + '<div id="masksLeft">' + '成人口罩剩餘數量: ' + '</div>' + '<div id="childMasksLeft">' + '兒童口罩剩餘數量:' + '</div>';
+                const infowindow = new google.maps.InfoWindow({
+                    content: contentString
+                });
+            }
+    </script>
+
+</body>
+
+</html>

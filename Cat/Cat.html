@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <script src="https://kit.fontawesome.com/05c128ff7b.js" crossorigin="anonymous"></script>
+    <style>
+        .telfixed {
+            /* border: 2px solid #ff8800; */
+            position: fixed;
+            bottom: 15px;
+            left: 15px;
+            font-size: 35px;
+            background-color: #fff;
+            border-radius: 100px;
+            box-shadow: 2px 2px 5px#000;
+            padding: 20px;
+            z-index: 1;
+        }
+
+        .telfixed .fas {
+            color: #ff8800;
+        }
+
+        .top-block {
+            background-color: #000;
+            height: 60px;
+            display: flex;
+        }
+
+        .top-block .left i {
+            color: orange;
+        }
+
+        .top-block .left {
+            color: aliceblue;
+            font-size: 18px;
+            padding: 20px;
+            margin-right: 900px;
+        }
+
+        .top-block .right {
+            margin: 16px;
+        }
+
+        .top-block .right a {
+            color: #000;
+            background-color: white;
+            text-decoration: none;
+            margin: 1px;
+        }
+
+        .top-block .right a {
+            color: #000;
+            background-color: #fff;
+        }
+
+        .Anilove {
+            padding: 15px;
+            /* width: 100%; */
+            color: #fff;
+            display: flex;
+            background-color: white;
+            position: sticky;
+            top: -10px;
+            z-index: 1;
+        }
+
+        .Anilove .logo {
+            color: #000;
+            text-decoration: none;
+            font-size: 30px;
+            display: flex;
+            align-items: center;
+        }
+
+        .Anilove .logo a {
+            color: black;
+            font-size: 52px;
+            text-decoration: none;
+        }
+
+        .Anilove .navbar {
+            margin-left: 100px;
+            padding: 30px;
+        }
+
+        .Anilove nav a {
+            color: #000;
+            background-color: white;
+            margin: 0 25px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+
+        .Anilove .navbar a {
+            font-size: 20px;
+            color: rgb(72, 73, 71);
+
+        }
+
+        .Anilove .nav-btn {
+            margin-left: 100px;
+            margin-top: 10px;
+            width: 160px;
+            height: 50px;
+            display: flex;
+        }
+
+        .Anilove .nav-btn a {
+            border: 2px solid orange;
+            color: orange;
+            font-size: 15px;
+            text-decoration: none;
+            padding: 20px;
+            margin: auto;
+        }
+
+        .Anilove .nav-btn a:hover {
+            background-color: rgb(31, 201, 231);
+            color: white;
+            width: 100%;
+            border-color: rgb(31, 201, 231);
+            text-align: center;
+        }
+
+
+        .help {
+            display: flex;
+            width: 100%;
+            margin: auto;
+            position: relative;
+        }
+
+        .text {
+            color: #000;
+            position: absolute;
+            margin-left: 100px;
+            margin-top: 180px;
+        }
+
+        .button-help {
+            background-color: orange;
+            color: white;
+            position: absolute;
+            height: 50px;
+            width: 150px;
+            margin-left: 100px;
+            margin-top: 300px;
+            border: 2px solid orange;
+        }
+
+        /* .button p{
+            padding:18px;
+        } */
+
+        .button-help:hover {
+            background-color: #000;
+            border: 2px solid#000;
+        }
+
+        .about {
+            display: flex;
+            margin: auto;
+            width: 100%;
+        }
+
+        .about img {
+            margin-left: 150px;
+
+        }
+
+        .text-about {
+            color: #000;
+            margin-left: 20px;
+            margin-top: 50px;
+        }
+
+        .text-about p {
+            margin: 15px;
+        }
+
+        .button-about {
+            color: #fff;
+            border: 2px solid orange;
+            background-color: orange;
+            height: 50px;
+            width: 150px;
+            margin-left: 15px;
+            margin-top: 20px;
+        }
+
+        .button-about:hover {
+            background-color: #000;
+            border: 2px solid#000;
+        }
+
+
+        .join {
+            height: 500px;
+            background-color: rgb(248, 245, 245);
+            color: #000;
+            text-align: center;
+            padding-top: 50px;
+            position: relative;
+        }
+
+        .join p {
+            margin: 10px 0 10px;
+        }
+
+        .pic-join {
+            margin-left: 3px;
+        }
+
+        .pic-join img {
+            padding: 10px;
+            margin: auto;
+        }
+
+        .pic-join img:hover {
+            opacity: 0.9;
+        }
+
+        .text-join {
+            color: white;
+            font-size: 30px;
+            display: flex;
+            bottom: 70px;
+            position: absolute;
+        }
+
+        .text-join p:hover {
+            color: orange;
+        }
+
+
+        .save {
+            background-color: #fff;
+            display: flex;
+            margin: auto;
+            height: 600px;
+        }
+
+        .save-pic2 img {
+            margin-right: 100px;
+            margin-left: 200px;
+        }
+
+        .save-pic3 img {
+            margin-top: 80px;
+        }
+
+        .save-left-text {
+            margin: 100px;
+            margin-bottom: 40px;
+        }
+
+        .save-left-text p {
+            font-size: 40px;
+            font-weight: 1000;
+            text-align: right;
+        }
+
+        .save-right-text p {
+            font-size: 12px;
+            padding-top: 10px;
+            color: slategrey;
+        }
+
+        .button-save {
+            color: white;
+            background-color: orange;
+            border: 2px solid orange;
+            font-size: 12px;
+            height: 50px;
+            width: 150px;
+            margin-top: 30px;
+        }
+
+        .button-save:hover {
+            background-color: #000;
+            border: 2px solid #000;
+        }
+
+        .events {
+            background-color: #fff;
+            display: flex;
+            height: 400px;
+            position: relative;
+        }
+
+        .events img {
+            margin: auto;
+        }
+
+        .events-text1 {
+            color: #000;
+            line-height: 55px;
+            font-size: 40px;
+            font-weight: 900;
+            position: absolute;
+            top: 85px;
+            right: 350px;
+        }
+
+        .events-text2 {
+            margin-left: -45px;
+            margin-right: 50px;
+            color: rgb(12, 198, 245);
+            font-weight: 900;
+            font-size: 45px;
+        }
+
+        .events-text3 {
+            margin-left: 150px;
+            color: #000;
+            font-size: 20px;
+            font-weight: 100;
+        }
+
+        .button-events1 {
+            margin: 5px 10px;
+            margin-left: 60px;
+            color: #fff;
+            background-color: orange;
+            border: 2px solid orange;
+            height: 50px;
+            width: 130px;
+        }
+
+        .button-events2 {
+            color: #fff;
+            background-color: orange;
+            border: 2px solid orange;
+            height: 50px;
+            width: 130px;
+        }
+
+        .button-events1:hover {
+            border: 2px solid rgb(4, 186, 241);
+            background-color: rgb(4, 186, 241);
+        }
+
+        .button-events2:hover {
+            border: 2px solid rgb(4, 186, 241);
+            background-color: rgb(4, 186, 241);
+        }
+
+        .dog-img {
+            background-color: orange;
+            width: 100%;
+            height: 520px;
+            position: relative;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        .news .la {
+            font-weight: 500;
+            font-family: 'Lato', sans-serif;
+            color: #535353;
+            font-size: 45px;
+            text-align: center;
+            line-height: 3;
+        }
+
+        .news .see {
+            font-weight: 500;
+            font-family: 'Lato', sans-serif;
+            color: #7abee9;
+            font-size: 25px;
+            text-align: center;
+            margin-top: -25px;
+            margin-bottom: 50px;
+        }
+
+        .news .pic {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .news .pic .pic1 {
+            width: 1200px;
+        }
+
+        .news .pic .pic2 {
+            position: relative;
+            width: 585px;
+            margin: 15px;
+        }
+
+        .news .pic .pic2 .npic2Text .picface img {
+            position: absolute;
+            width: 100px;
+            border-radius: 180px;
+            margin-top: 80px;
+            margin-left: 235px;
+        }
+
+        .news .pic .pic2 .npic2Text .ntext {
+            position: absolute;
+            text-align: center;
+            color: #fff;
+            margin-top: 190px;
+            margin-left: 120px;
+        }
+
+        .news .pic .pic2 .npic2Text .ntext .aName {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .news .pic .pic2 .npic2Text .ntext .aName:hover {
+            color: #ff8800;
+        }
+
+        .news .pic .pic2 .npic2Text .acontainer .atext {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 700;
+            font-size: 30px;
+            /* line-height: 15%; */
+        }
+
+        .news .pic .pic2 .npic2Text .acontainer .atext:hover {
+            color: #ff8800;
+            transition: .3s;
+        }
+
+        .news .pic .pic3 {
+            position: relative;
+            width: 585px;
+            margin: 15px;
+        }
+
+        .news .pic .pic3 .pic3Text {
+            position: absolute;
+            text-align: center;
+            margin-top: 75px;
+            margin-left: 77px;
+        }
+
+        .news .pic .pic3 .pic3Text .pic3face img {
+            width: 100px;
+            border-radius: 180px;
+        }
+
+        .news .pic .pic3 .pic3Text .donametext p {
+            text-align: center;
+            color: #fff;
+        }
+
+        .news .pic .pic3 .pic3Text .donametext .pic3a {
+            text-align: center;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .news .pic .pic3 .pic3Text .donametext .pic3a:hover {
+            color: #ff8800;
+        }
+
+        .news .pic .pic3 .pic3Text .donametext .container .dotext {
+            font-weight: 700;
+            font-size: 30px;
+        }
+
+        .news .pic .pic3 .pic3Text .donametext .container .dotext p:hover {
+            color: #ff8800;
+            transition: .3s;
+        }
+
+        .record {
+            position: relative;
+            margin-top: 40px;
+        }
+
+        .record img {
+            width: 100%;
+            height: 450px;
+        }
+
+        .record .divpic {
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            padding: 85px 310px;
+        }
+
+        .record .divpic .div img {
+            width: 150px;
+            height: 150px;
+            color: #fff;
+        }
+
+        .record .divpic .div .num {
+            color: #fff;
+            text-align: center;
+        }
+
+        .record .divpic .div .num .recordnum {
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            font-size: 60px;
+            line-height: 2;
+        }
+
+        .pets {
+            width: 100%;
+            height: 100px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .pets-text {
+            font-size: 40px;
+            font-weight: 800;
+            margin-top: 50px;
+        }
+
+        .ig {
+            width: 100%;
+            display: flex;
+            margin: auto;
+        }
+
+        .ig-operlay:hover {
+            opacity: 0.5;
+        }
+
+        footer img {
+            width: 100%;
+            margin-top: -30px;
+        }
+
+        .footdiv {
+            position: relative;
+            margin-top: 30px;
+        }
+
+        .footdiv .ftposition {
+            position: absolute;
+            color: #fff;
+            text-align: center;
+            padding: 100px 425px;
+            line-height: 1.8;
+        }
+
+        .footdiv .ftposition .footlogo {
+            display: flex;
+            justify-content: center;
+        }
+
+        .footdiv .ftposition .footlogo p {
+            font-size: 40px;
+            padding-right: 20px;
+            padding-left: 20px;
+            line-height: 0;
+        }
+
+        .footdiv .ftposition .footlogo .footdata {
+            line-height: 1.5;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="top-block">
+        <div class="left">
+            <i class="fas fa-phone-alt" fa-2x></i>
+            Toll-free: (123) 456-7890
+        </div>
+        <div class="right">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
+
+
+    <div class="telfixed">
+        <a href=""><i class="fas fa-phone-alt"></i></a>
+    </div>
+
+
+    <div class="Anilove">
+        <div class="logo">
+            <img src="assets/asset 0.png" alt="圖片說明">
+            <a href="#">Anilove</a>
+        </div>
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Events</a>
+            <a href="#">News</a>
+            <a href="#">Contacts</a>
+        </nav>
+        <div class="nav-btn">
+            <a href="#">DONATE NOW!</a>
+        </div>
+    </div>
+
+
+    <div class="help">
+        <img src="assets/asset 9.jpeg" width="100%" alt="圖片說明">
+        <div class="text">
+            <p style="font-size: 30px;">Animals Need</p>
+            <p style="font-size: 45px;color:rgb(31, 201, 231)">YOUR Help!</p>
+            <p style="font-size: 25px;">You can chip in with money & effort!</p>
+        </div>
+        <!-- <div class="button-help">
+           <p>DONATE NOW!</p> 
+        </div> -->
+        <button class="button-help">DONATE NOW!</button>
+    </div>
+
+
+
+    <div class="about">
+        <img src="assets/asset 1.jpeg" width="35%" alt="圖片說明">
+        <div class="text-about">
+            <p style="font-size: 35px;font-weight: 1000; ">About Us</p>
+            <p style="font-size: 25px;color:rgb(17, 14, 197)">What Makes Us Care About Pets?</p>
+            <p style="font-size: 12px;">If it wasn’t for our founder’s childhood spent on a ranch in northern Texas,
+                surrounded
+                by</br> domestic animals and pets all the time till she went to college – there might have been no</br>
+                Anilove animal shelter now. So as soon as she graduated with her Veterinary degree 12 years</br> ago,
+                she already knew what she will be doing for a living.</br></br></br>All in all, with thousands of
+                animals saved off the streets and cared for every year, we hope to</br> encourage much more pet
+                adoptions to happen!</p>
+
+            <button class="button-about">LEARN MORE</button>
+
+        </div>
+    </div>
+
+
+
+    <div class="join">
+        <p style=" color: #000;font-size: 30px;font-weight: 1000;font-size: 35px;">How You Can Help </p>
+        <p style="color: rgb(31, 201, 231);font-size: 25px">There Are Countless Ways You Can Join In & Help Us!</p>
+
+        <div class="pic-join">
+            <img src="assets/asset 10.jpeg" width="20%" alt="圖片說明">
+            <img src="assets/asset 11.jpeg" width="20%" alt="圖片說明">
+            <img src="assets/asset 12.jpeg" width="20%" alt="圖片說明">
+        </div>
+
+        <div class="text-join">
+            <p style="margin-left: 300px;">Volunteer</p>
+            <p style="margin-left: 180px;">Adopt</p>
+            <p style="margin-left: 190px;">Sponsor</p>
+        </div>
+
+    </div>
+
+
+
+
+    <div class="save">
+        <div class="save-pic2">
+            <div class="save-left-text">
+                <p>Volunteer to Save</p>
+                <p>Animals Now!</p>
+            </div>
+            <img src="assets/asset 2.jpeg" width="350" height="280" alt="圖片說明">
+        </div>
+
+
+        <div class="save-pic3">
+            <img src="assets/asset 3.jpeg" width="440" height="300" alt="圖片說明">
+            <div class="save-right-text">
+                <p>With so many pets less fortunate than your cat and dog, there’s always something you can do</br>
+                    about it!</p>
+                <button class="button-save">VOLUNTEER</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="events">
+        <img src="assets/asset 13.jpeg" width="900" height="330" alt="圖片說明">
+        <div class="events-text1">
+            <p>Upcoming Events</p>
+            <div class="events-text2">
+                <p>Kennel Training Class</p>
+                <div class="events-text3">
+                    <p>FR, June 11th</p>
+                </div>
+                <button class="button-events1">DETAILS</button>
+                <button class="button-events2">VIEW ALL</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="dog-img">
+        <img src="assets/asset 15.jpeg" width="100%" height="500" alt="圖片說明">
+    </div>
+
+
+
+    <div class="news">
+        <h2 class="la">Latest News & Updates</h2>
+        <p class="see">See a Video Review of Our Cutest Pets!</p>
+        <div class="pic">
+            <div class="divpic pic1">
+                <video width="1190" height="500" controls>
+                    <source src="plaza_time_lapse-1.mp4" type="video/ogg">
+            </div>
+            <div class="divpic pic2">
+                <div class="npic2Text">
+                    <div class="picface">
+                        <img src="assets/02.jpg" alt="">
+                    </div>
+                    <div class="ntext">
+                        <p>18 Sept, by <a class="aName" href="#">Jennifer Moreno</a></p>
+                        <div class="acontainer">
+                            <a class="atext" href="#">
+                                <p>New Advancements in the</p>
+                                <p>Veterinary Industry</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <img src="assets/asset 16.jpeg" alt="">
+            </div>
+            <div class="divpic pic3">
+                <div class="pic3Text">
+                    <div class="pic3face">
+                        <img src="assets/01.jpg" alt="">
+                    </div>
+                    <div class="donametext">
+                        <p>18 Sept, by <a class="pic3a aname" href="#">Jennifer Moreno</a></p>
+                        <div class="container">
+                            <a class="pic3a dotext" href="#">
+                                <p>Do Dogs Hate It When You Hug <br>Them? </p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <img src="assets/asset 17.jpeg" alt="圖片說明1">
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="record">
+        <div class="divpic">
+            <div class="div pic1 ">
+                <img src="assets/record01.jpg" alt="">
+                <div class="num">
+                    <p class="recordnum">1000</p>
+                    <p>Pets</p>
+                </div>
+            </div>
+            <div class="div pic2">
+                <img src="assets/record02.jpg" alt="">
+                <div class="num">
+                    <p class="recordnum">20</p>
+                    <p>Awards</p>
+                </div>
+            </div>
+            <div class="div pic3">
+                <img src="assets/record03.jpg" alt="">
+                <div class="num">
+                    <p class="recordnum">100</p>
+                    <p>Staffers</p>
+                </div>
+            </div>
+            <div class="div pic4">
+                <img src="assets/record04.jpg" alt="">
+                <div class="num">
+                    <p class="recordnum">1200</p>
+                    <p>Contributors</p>
+                </div>
+            </div>
+        </div>
+        <img src="assets/asset 18.jpeg" alt="">
+    </div>
+
+
+
+
+    <div class="pets">
+        <div class="pets-text">
+            <p>See Our Adorable Pets @Instagram!</p>
+        </div>
+    </div>
+
+
+
+
+    <div class="ig">
+        <div class="ig-operlay">
+            <img src="assets/asset 5.jpeg" width="316" height="100%" alt="圖片說明">
+        </div>
+        <div class="ig-operlay">
+            <img src="assets/asset 6.jpeg" width="315" height="100%" alt="圖片說明">
+        </div>
+        <div class="ig-operlay">
+            <img src="assets/asset 7.jpeg" width="315" height="100%" alt="圖片說明">
+        </div>
+        <div class="ig-operlay">
+            <img src="assets/asset 8.jpeg" width="316" height="100%" alt="圖片說明">
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="footdiv">
+            <div class="ftposition">
+                <div class="footlogo">
+                    <div class="fotlogo">
+                        <img src="assets/asset 0.png" alt="">
+                    </div>
+                    <p>Anilove</p>
+                </div>
+                <div class="footicon">
+                    <a href="#"><i class="fab fa-twitter-square"></i></a>
+                    <a href="#"><i class="fab fa-facebook-square"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-square"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <div class="footdata">
+                    <p>Paid for by the ConLiberal NATIONAL COMMITTEE</p>
+                    <p>(123) 456-7890</p>
+                    <p>ConLiberal NATIONAL COMMITTEE 430 South Capitol Street Southeast Washington, DC 20003</p>
+                    <p>2020 © Anilove. All rights reserved. </p>
+                </div>
+            </div>
+        </div>
+        <img src="assets/asset 19.jpeg" height="450" alt="">
+    </footer>
+</body>
+
+</html>

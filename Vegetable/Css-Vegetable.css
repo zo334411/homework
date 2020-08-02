@@ -1,0 +1,1022 @@
+.top {
+    height: 45px;
+    background-color: rgb(68, 160, 68);
+    color: #fff;
+ }  
+
+ .top-left{
+    margin-left: 50px;
+    padding-top: 15px;
+}
+
+.a{
+    font-weight: 1000;
+}
+
+.b{
+    font-weight: 1000;
+} 
+
+.top-right{
+    margin-left:820px;
+    margin-top:-15px;
+}
+
+.top-right a{
+    color:#fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.Naturio{
+    display: flex;
+    height: 80px;
+}
+
+.Naturio-logo{
+    margin-left: 40px;
+    padding-top: 10px;
+}
+
+
+.Naturio-nav{
+    margin-left: 550px;
+    margin-top: 30px;
+} 
+
+ .Naturio-nav nav a{
+    text-decoration: none;
+    color: rgb(129, 119, 119);
+    margin:0 5px;
+} 
+
+.Green-Leaves{
+    width: 100%;
+    position: relative;
+}
+
+.Green-Leaves-text{
+    line-height: 1.5;
+    margin-left: 50px;
+    margin-top: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.c{
+    color: rgb(20, 187, 56);
+}
+
+.d{
+    font-size: 30px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.Green-Leaves-text p{
+    font-size: 60px;
+    font-weight: 800;
+}
+
+.Green-Leaves-btn button{
+    background-color:rgb(122, 226, 122);
+    color: ivory;
+    border: none;
+    width: 150px;
+    height: 50px;
+    margin-left: 0px;
+    margin-top: 10px;
+}
+
+
+button:hover{
+    background-color:#000;
+    border:none ;
+}
+
+.number{
+   height: 400px;
+}
+
+
+.number-title h1{
+    font-size: 60px;
+    color: rgb(110, 209, 110);
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.number123{
+    display: flex;
+}
+.number1 img{
+    margin-left: 200px;
+    margin-top: 100px;
+}
+
+.number2 img{
+    margin-left: 350px;
+    margin-top: 105px;
+}
+
+.number3 img{
+    margin-left: 400px;
+    margin-top: 110px;
+}
+
+.number123-text{
+    display: flex;
+    margin: auto;
+}
+
+.number1-text h1{
+    font-weight: 1000;
+    font-size: 20px;
+    margin-left: 130px;
+    margin-top: 20px;
+}
+
+.number1-text p{
+    color: grey;
+    font-size: 16px;
+    line-height: 1.2;
+    margin-left: 80px;
+    margin-top: 20px;
+  }
+
+ .number2-text h1{
+    font-weight: 1000;
+    font-size: 20px;
+    margin-left: 190px;
+    margin-top: 20px;
+  }
+  
+ .number2-text p{
+    color: grey;
+    font-size: 16px;
+    line-height: 1.2;
+    margin-left: 80px;
+    margin-top: 20px;
+ }
+
+ .number3-text h1{
+    font-weight: 1000;
+    font-size: 20px;
+    margin-left: 220px;
+    margin-top: 20px;
+  }
+      
+ .number3-text p{
+    color: grey;
+    font-size: 16px;
+    line-height: 1.2;
+    margin-left: 100px;
+    margin-top: 20px;
+  }
+    
+  .double-pic{
+      display: flex;
+      margin: auto;
+      height: 400px;
+  }
+
+  .double-pic-left{
+    margin-left: 50px;
+  }
+
+
+.our-products-top{
+    margin-top: 50px; 
+}
+
+.our-products-top h1{
+ font-size: 40px;
+ font-family: 'Dancing Script', cursive;
+ margin-left: 550px;
+}
+
+.our-products-top-a{
+    margin-top: 30px;
+margin-left: 500px;
+}
+
+.our-products-top-a a{
+    margin-left: 10px;
+    font-size: 15px;
+    color: grey;
+    text-decoration: none;
+   }
+
+   .our-products-top-NEWARRIVALS{
+   margin-left: 370px;
+   margin-top: -15px;
+   }
+   .our-products-top-NEWARRIVALS a{
+    
+    color: green;
+    text-decoration: none;
+
+   }
+.our-products-pic{
+    display: flex;
+}
+
+.our-products-pic1-img {
+   margin-top: 20px;
+}
+
+ .our-products-pic1-img img{
+    height: 200px;
+    margin-left: 120px;
+   } 
+
+.e{
+    font-size: 12px;
+    color:  rgb(18, 216, 61);
+    margin-left: 170px;
+    line-height: 1.8;
+}
+
+.our-products-pic1-text p{
+    font-size: 18px;
+    margin-left: 165px;
+    line-height: 1.8;
+
+}
+
+.f{
+    margin:50px; 
+    color: rgb(18, 216, 61);
+    margin-left: 210px;
+
+}
+
+
+
+.g{
+    font-size: 12px;
+    color:  rgb(18, 216, 61);
+    margin-left: 98px;
+    line-height: 1.8;
+}
+
+
+.our-products-pic2-img img{
+    margin-left: 90px;
+    margin-top: 20px;
+}
+.h{
+    margin:50px; 
+    color: rgb(18, 216, 61);
+    margin-left: 180px;
+   margin-top: 50px;
+  }
+
+  .our-products-pic2-text p{
+    font-size: 18px;
+    margin-left: 125px;
+    line-height: 1.8;
+  }
+
+
+  .our-products-pic3-img img{
+    margin-left: 90px;
+    margin-top: 20px;
+}
+
+ 
+  .i{
+    font-size: 12px;
+    color:  rgb(18, 216, 61);
+    margin-left: 140px;
+    line-height: 1.8;
+}
+
+.our-products-pic3-text p{
+    font-size: 18px;
+    margin-left: 145px;
+    line-height: 1.8;
+  }
+
+.j{
+    margin:50px; 
+    color: rgb(18, 216, 61);
+    margin-left: 180px;
+   margin-top: 50px;
+  }
+
+
+  .our-products-pic3-img img{
+    margin-left: 90px;
+    margin-top: 20px;
+}
+
+
+.our-products-pic4-img img{
+    margin-left: 90px;
+    margin-top: 20px;
+}
+
+  .k{
+    font-size: 12px;
+    color:  rgb(18, 216, 61);
+    margin-left: 160px;
+    line-height: 1.8;
+}
+
+.our-products-pic4-text p{
+    font-size: 18px;
+    margin-left: 110px;
+    line-height: 1.8;
+  }
+
+.l{
+    margin:50px; 
+    color: rgb(18, 216, 61);
+    margin-left: 180px;
+   margin-top: 50px;
+  }
+
+  .our-products-pic-btn{
+    display: flex;
+}
+
+.our-products-pic5-img {
+   margin-top: 20px;
+}
+
+ .our-products-pic5-img img{
+    height: 200px;
+    margin-left: 120px;
+   } 
+
+.m{
+    font-size: 12px;
+    color:  rgb(18, 216, 61);
+    margin-left: 150px;
+    line-height: 1.8;
+}
+
+.our-products-pic5-text p{
+    font-size: 18px;
+    margin-left: 135px;
+    line-height: 1.8;
+
+}
+
+.n{
+    margin:50px; 
+    color: rgb(18, 216, 61);
+    margin-left: 200px;
+
+}
+
+.o{
+    font-size: 12px;
+    color:  rgb(18, 216, 61);
+    margin-left: 120px;
+    line-height: 1.8;
+}
+
+
+.our-products-pic6-img img{
+    margin-left: 90px;
+    margin-top: 20px;
+}
+.p{
+    margin:50px; 
+    color: rgb(18, 216, 61);
+    margin-left: 180px;
+   margin-top: 50px;
+  }
+
+  .our-products-pic6-text p{
+    font-size: 18px;
+    margin-left: 100px;
+    line-height: 1.8;
+  }
+
+ 
+  .q{
+    font-size: 12px;
+    color:  rgb(18, 216, 61);
+    margin-left: 100px;
+    line-height: 1.8;
+}
+
+.our-products-pic7-text p{
+    font-size: 18px;
+    margin-left: 145px;
+    line-height: 1.8;
+  }
+
+.r{
+    margin:50px; 
+    color: rgb(18, 216, 61);
+    margin-left: 180px;
+   margin-top: 50px;
+  }
+
+
+  .our-products-pic7-img img{
+    margin-left: 90px;
+    margin-top: 20px;
+}
+
+
+.our-products-pic8-img img{
+    margin-left: 90px;
+    margin-top: 20px;
+}
+
+  .s{
+    font-size: 12px;
+    color:  rgb(18, 216, 61);
+    margin-left: 150px;
+    line-height: 1.8;
+}
+
+.our-products-pic8-text p{
+    font-size: 18px;
+    margin-left: 110px;
+    line-height: 1.8;
+  }
+
+.t{
+    margin:50px; 
+    color: rgb(18, 216, 61);
+    margin-left: 170px;
+   margin-top: 50px;
+  }
+
+.Fruits-Vegetables{
+    height: 300px;
+    position: relative;
+}
+
+  .Fruits-Vegetables-title h1{
+    font-size: 65px;
+    font-weight: 1000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 350px;
+    padding-top: 100px;
+  }
+
+  .Fruits-Vegetables-p p{
+  font-size: 30px;
+  font-family: 'Dancing Script', cursive;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 450px;
+  padding-top: 200px;
+  }
+
+
+.Fruits-Vegetables-btn button{
+height: 50px;
+width: 150px;
+color:#fff;
+background-color: rgb(130, 206, 53);
+border: 1px solid rgb(130, 206, 53);
+position: absolute;
+top: 0;
+left: 0;
+margin-left: 580px;
+margin-top: 250px;
+}
+
+.love{
+    margin-top: 250px;
+}
+
+.love-pic{
+    margin-left: 20px;
+}
+
+.love-h1{
+    margin-left: 800px;
+    margin-top: -510px;
+}
+
+.love-h1 h1{
+    font-size: 25px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.love-p1 p{
+   color: darkgrey;
+   line-height: 1.5;
+   margin-left: 800px;
+   margin-top: 10px;
+}
+
+.love-h2{
+    margin-left: 800px;
+    margin-top: 30px;
+}
+
+.love-h2 h2{
+    font-size: 25px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.love-p2 p{
+   color: darkgrey;
+   line-height: 1.5;
+   margin-left: 800px;
+   margin-top: 10px;
+}
+
+
+.love-h3{
+    margin-left: 800px;
+    margin-top: 60px;
+}
+
+.love-h3 h3{
+    font-size: 25px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.love-p3 p{
+   color: darkgrey;
+   line-height: 1.5;
+   margin-left: 800px;
+   margin-top: 10px;
+}
+
+.Latest{
+   margin-top: 200px;
+}
+
+.Latest-title{
+    margin-left: 500px;
+    margin-top: -450px;
+}
+
+.Latest-title h1{
+  font-size: 40px;
+  font-family: 'Dancing Script', cursive;
+}
+
+
+.Latest-pic1{
+    margin-left: 60px;
+    margin-top: 25px;
+}
+
+.Latest-pic2{
+    margin-left: 500px;
+    margin-top: -230px;
+}
+
+.Latest-pic3{
+    margin-left: 900px;
+    margin-top: -230px;
+}
+
+.Latest-btn{
+    display: flex;
+}
+
+.Latest-btn1 button{
+   width: 120px;
+   height: 20px;
+   background-color:rgb(69, 156, 69);
+   color: white;
+   border: none;
+   margin-top: 10px;
+   margin-left: 150px;
+ }
+
+ 
+ .Latest-btn2 button{
+    width: 120px;
+    height: 20px;
+    background-color:rgb(69, 156, 69);
+    color: white;
+    border: none;
+    margin-top: 10px;
+    margin-left: 330px;
+  }
+
+  .Latest-btn3 button{
+    width: 120px;
+    height: 20px;
+    background-color:rgb(69, 156, 69);
+    color: white;
+    border: none;
+    margin-top: 10px;
+    margin-left: 280px;
+  }
+
+  
+  .Latest-btn1 button:hover{
+   background-color: #000;
+  }
+ 
+  
+  .Latest-btn2 button:hover{
+   background-color: #000;
+   }
+ 
+   .Latest-btn3 button:hover{
+   background-color: #000;
+   }
+ 
+   .Latest-text1{
+       display: flex;
+   }
+
+   .Latest-p1{
+        margin-top: 10px;
+        margin-left: 100px;
+   }
+
+  .Latest-p1 p{
+      font-weight: 1000;
+  }
+
+  .Latest-p2{
+    margin-top: 10px;
+    margin-left: 220px;
+}
+
+.Latest-p2 p{
+  font-weight: 1000;
+}
+
+.Latest-p3{
+    margin-top: 10px;
+    margin-left: 120px;
+}
+
+.Latest-p3 p{
+  font-weight: 1000;
+}
+ 
+.Latest-p1:hover{
+    color: yellowgreen;
+    transition: .5s;
+}
+
+.Latest-p2:hover{
+    color: yellowgreen;
+    transition: .5s;
+}
+
+.Latest-p3:hover{
+    color: yellowgreen;
+    transition: .5s;
+}
+
+.Latest-text2{
+    display: flex;
+}
+
+.Latest-text2{
+  display: flex; 
+}
+
+.Latest-p4 p{
+ font-size: 12px;
+ color: yellowgreen;
+ margin-top: 16px;
+ margin-left:85px ;
+}
+
+.Latest-p5 p{
+    font-size: 12px;
+    color: yellowgreen;
+    margin-top: 17px;
+    margin-left:373px ;
+   }
+
+   .Latest-p6 p{
+    font-size: 12px;
+    color: yellowgreen;
+    margin-top: 17px;
+    margin-left:323px ;
+   }
+
+   
+.Latest-p4 p:hover{
+    color: gray;
+    transition: .5s;
+   }
+   
+   .Latest-p5 p:hover{
+    color: gray;
+    transition: .5s;
+      }
+   
+      .Latest-p6 p:hover{
+        color: gray;
+        transition: .5s;
+      }
+
+      .Latest-text3{
+          display: flex;
+      }
+      .Latest-p7{
+        font-size: 12px;
+        color: grey;
+        margin-left: 170px;
+        margin-top: -13px;
+      }
+
+      .Latest-p8{
+        font-size: 12px;
+        color: grey;
+        margin-left: 300px;
+        margin-top: -13px;
+      }
+
+      .Latest-p9{
+        font-size: 12px;
+        color: grey;
+        margin-left: 250px;
+        margin-top: -13px;
+      }
+
+
+      .Cold-Cereal{
+          display: flex;
+      }
+
+      .container{
+          margin-left: 120px;
+          height: 1300px;
+      }
+
+      .Cold-Cereal-title1 h1{
+          margin-top: 150px;
+          margin-right: 800px;
+         font-size: 40px; 
+         font-family: 'Dancing Script', cursive;
+      }
+
+      .Cold-Cereal-title2 h2{
+        margin-top: -35px;
+        margin-left: 430px;
+       font-size: 40px; 
+       font-family: 'Dancing Script', cursive;
+    }
+
+
+.Cold-Cereal-title3 h3{
+        margin-top: -35px;
+        margin-left: 850px;
+       font-size: 40px; 
+       font-family: 'Dancing Script', cursive;
+    }
+
+    .Cold-Cereal-pic1{
+       margin-left: -45px;
+       width: 250px;
+    }
+
+    .Cold-Cereal-pic1 img{
+        margin-top: 30px;
+        border: 1px solid gray;
+    }
+
+    .Cold-Cereal-pic2{
+           width: 250px;
+          margin-left: 400px;
+          margin-top: -250px;
+        }
+    
+        .Cold-Cereal-pic2 img{
+            border: 1px solid gray;
+        }
+    
+
+        .Cold-Cereal-pic3{
+            width: 250px;
+           margin-left: 810px;
+           margin-top: -255px;
+         }
+     
+         .Cold-Cereal-pic3 img{
+             border: 1px solid gray;
+         }
+     
+         .Cold-Cereal-text1 p1{
+             color: rgb(111, 155, 44);
+             font-size: 16px;
+         }
+
+         .Cold-Cereal-text1{
+           margin-left: -45px;  
+           line-height: 1.5;
+        }
+
+        .Cold-Cereal-text1 p3{
+            color: rgb(111, 155, 44);
+            font-size: 20px;
+        }
+
+
+        .Cold-Cereal-text2 p1{
+            color: rgb(111, 155, 44);
+            font-size: 16px;
+        }
+
+
+        .Cold-Cereal-text2{
+          margin-left: 400px; 
+          margin-top: -80px; 
+          line-height: 1.5;
+       }
+
+       .Cold-Cereal-text2 p3{
+           color: rgb(111, 155, 44);
+           font-size: 20px;
+       }
+
+       .Cold-Cereal-text3 p1{
+        color: rgb(111, 155, 44);
+        font-size: 16px;
+    }
+
+    .Cold-Cereal-text3{
+        margin-left: 810px; 
+        margin-top: -80px; 
+        line-height: 1.5;
+   }
+
+   .Cold-Cereal-text3 p3{
+       color: rgb(111, 155, 44);
+       font-size: 20px;
+   }
+
+
+.green{
+    margin-top: 30px;
+    position: relative;
+}
+
+.green-title h1{
+    margin-top: 80px;
+    margin-left: 480px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    font-size: 35px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.green-pic{
+    margin-top: 140px;
+    margin-left: 600px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.green-pic img{
+  border-radius: 500px;
+  border: 1px solid white;
+}
+
+
+
+.white{
+    height: 200px;
+}
+
+.green-text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 250px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.green-text p1{
+    font-size: 22px;
+    margin-left: 630px;
+}
+
+.green-text p2{
+    font-size: 15px;
+    margin-left: 100px;
+    font-weight: 600;
+
+}
+
+
+.green-text p3{
+    font-size: 15px;
+    margin-left: 480px;
+    font-weight: 600;
+}
+
+
+.green-text p4{
+    font-weight: 800;
+    font-size: 15px;
+    margin-left: 610px;
+}
+
+
+.green-text p5{
+    font-size: 15px;
+    margin-left: 615px;
+}
+
+
+.white h1{
+text-align: center;
+margin-top: 30px;
+ font-family: 'Dancing Script', cursive;
+  font-size: 40px;
+}
+
+.white-email{
+   border: 2px solid  gray;
+}
+
+.white-email p{
+    color: gray;
+    font-size: 20px;
+
+}
+
+/*  Subscribe Newsletter */
+#subscribe-area{
+    height: 300px;
+}
+#subscribe-area .title{
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    color: #000;
+    font-size: 40px;
+    margin-top: 70px;
+}
+#subscribe-area .input{
+    height: 50px;
+    text-align: center;
+    margin-top: 55px;
+}
+#subscribe-area .input .email{
+    width: 600px;
+    height: 80%;
+    border: 1px solid #bbb;
+    font-size: 16px;
+    color: #bbb;
+}
+#subscribe-area .input button{
+    background-color: #86AE34;
+    border: 2px solid #86AE34;
+    margin-bottom: 2px;
+    margin-left: 10px;
+    height: 85%;
+    width: 145px;
+    vertical-align: middle;
+    color: #fff;
+}
+/* footer */
+footer{    
+    position: relative;
+}
+footer >img{
+    width: 100%;
+}
+footer #fot{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top:110px;
+    width: 75%;
+    left: 175px;
+}
+footer #fot .categories{
+    border-top: 0;
+
+}
+footer #fot .item > h3{
+    margin: 10px auto;
+    font-size: 25px;
+    color: #4f4f4f;
+    font-family: Pacifico, handwriting;
+}
+footer #fot .item ul{
+    line-height: 1.5;
+}
+footer #fot .item ul a{
+    text-decoration: none;
+}
+footer #fot .item ul,footer #fot .item ul a{
+    color: #79787F;
+    font-size: 18px;
+}

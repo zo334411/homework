@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>全球肺炎統計表</h1>
+    <table>
+        <thead>
+            <tr>
+                <td>國家</td>
+                <td>確診</td>
+                <td>死亡</td>
+                <td>治癒</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>台灣</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>美國</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>巴西</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>全球統計</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- <ul>
+        <li>JS</li>
+        <li>CSS</li>
+        <li>HTML</li>
+
+    </ul> -->
+    <script>
+        //建立Virus資料，傳入Table中
+        //全球肺炎統計表
+        let title = document.querySelector("h1");
+        title.innerText = "全球肺炎統計表";
+
+
+        // document.querySelector("table tbody")
+        // let languages = document.querySelectorall("ul li");
+        // console.log(languages);
+
+
+        var covid = {
+            TW: [
+                { nation: '台灣', Confirmed: '455', Recovery: '440', died: '7' }],
+
+            UA: [
+                { nation: '美國', Confirmed: '3970000', Recovery: '1160000', died: '144000' }],
+
+
+            Brazil: [
+                { nation: '巴西', Confirmed: '2170000', Recovery: '1470000', died: '81597' }],
+
+            Global: [
+                { nation: '全球統計', Confirmed: '6140455', Recovery: '2630440', died: '225604' }],
+        };
+
+        let ConfirmedTW = document.querySelector("tbody tr:first-child td:nth-child(2)");
+        ConfirmedTW.innerText = '455';
+
+        let RecoveryTW = document.querySelector("tbody tr:first-child td:nth-child(3)");
+        RecoveryTW.innerText = '440';
+
+        let diedTW = document.querySelector("tbody tr:first-child td:nth-child(4)");
+        diedTW.innerText = '7';
+
+
+        let ConfirmedUA = document.querySelector("tbody tr:nth-child(2) td:nth-child(2)");
+        ConfirmedUA.innerText = '3970000';
+
+        let RecoveryUA = document.querySelector("tbody tr:nth-child(2) td:nth-child(3)");
+        RecoveryUA.innerText = '1160000';
+
+        let diedUA = document.querySelector("tbody tr:nth-child(2) td:nth-child(4)");
+        diedUA.innerText = '144000';
+
+
+        let ConfirmedBrazil = document.querySelector("tbody tr:nth-child(3) td:nth-child(2)");
+        ConfirmedBrazil.innerText = '2170000';
+
+        let RecoveryBrazil = document.querySelector("tbody tr:nth-child(3) td:nth-child(3)");
+        RecoveryBrazil.innerText = '1470000';
+
+        let diedBrazil = document.querySelector("tbody tr:nth-child(3) td:nth-child(4)");
+        diedBrazil.innerText = '81597';
+
+
+        let ConfirmedGlobal = document.querySelector("tbody tr:nth-child(4) td:nth-child(2)");
+        ConfirmedGlobal.innerText = '6140455';
+
+        let RecoveryGlobal = document.querySelector("tbody tr:nth-child(4) td:nth-child(3)");
+        RecoveryGlobal.innerText = '2630440';
+
+        let diedGlobal = document.querySelector("tbody tr:nth-child(4) td:nth-child(4)");
+        diedGlobal.innerText = '225604';
+
+    </script>
+</body>
+
+</html>

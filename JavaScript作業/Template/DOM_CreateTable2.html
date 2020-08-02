@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        th,
+        td {
+            table-layout: fixed;
+            width: 100%;
+            border-collapse: collapse;
+            border: 3px solid purple;
+        }
+
+        tbody tr:nth-child(odd) {
+            background-color: lightblue;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: aqua;
+        }
+
+        thead th:nth-child(1) {
+            width: 10%;
+            cursor: pointer;
+        }
+
+        thead th:nth-child(2) {
+            width: 10%;
+            cursor: pointer;
+        }
+
+        thead th:nth-child(3) {
+            width: 10%;
+            cursor: pointer;
+        }
+
+        thead th:nth-child(4) {
+            width: 60%;
+        }
+
+        thead th:nth-child(5) {
+            width: 10%;
+        }
+
+        img {
+            /* width: auto; */
+            height: 10%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <script>
+        //1.create table 
+        let table = document.createElement('table');
+        let thead = document.createElement('thead');
+        let tbody = document.createElement('tbody');
+        table.append(thead);
+        table.append(tbody);
+
+        //2.create body 
+        let body = document.querySelector('body');
+        body.append(table);
+
+        //3.Create Thead,["sku","price","storage","description"]
+        //tr & th- thead
+        let tr1 = document.createElement('tr');
+        tr1.append(createTH('Sku'));
+        tr1.append(createTH('Price'));
+        tr1.append(createTH('Storage'));
+        tr1.append(createTH('Description'));
+
+        thead.append(tr1);
+
+        //4.Create Tbody,["MW762","10900","32GB","10.2吋 iPad Wi-Fi 機型 32GB - 金色"]
+        //tr & td- tbody
+        let tr2 = document.createElement('tr');
+        tr2.append(createTD('MW762'));
+        tr2.append(createTD('10900'));
+        tr2.append(createTD('32GB'));
+        tr2.append(createTD('10.2吋 iPad Wi-Fi 機型 32GB - 金色'));
+
+        tbody.append(tr2);
+
+        //建立th元素
+        function createTH(text) {
+            let th = document.createElement('th');
+            th.innerText = text;
+
+
+            return th;
+        }
+
+
+        //建立td元素
+        function createTD(text) {
+            let td = document.createElement('td');
+            td.innerText = text;
+
+
+            return td;
+        }
+    </script>
+
+</body>
+
+</html>
