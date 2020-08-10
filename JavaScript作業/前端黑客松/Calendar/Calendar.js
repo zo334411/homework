@@ -4,18 +4,17 @@ var y;
 var m;
 var d;
 
+//獲取日期中的年份
+y = today.getFullYear();
+
+//獲取日期中的月份(需要注意的是：月份是從0開始計算，獲取的值比正常月份的值少1)
+m = today.getMonth();
+
+//獲取日期中的日(方便在建立日期表格時高亮顯示當天)
+d = today.getDate();
+
+
 function changemonth() {
-  //獲取日期中的年份
-  y = today.getFullYear();
-
-  //獲取日期中的月份(需要注意的是：月份是從0開始計算，獲取的值比正常月份的值少1)
-  m = today.getMonth();
-
-  //獲取日期中的日(方便在建立日期表格時高亮顯示當天)
-  d = today.getDate();
-
-
-
   //獲取當月的第一天
   firstday = new Date(y, m, 1);
 
@@ -29,9 +28,12 @@ function changemonth() {
 
   //先選取tbody的位置
   var tbody = document.getElementsByTagName('tbody')[0];
-  //清空tbody
-  // tbody.innerHTML = '';
-  // document.getElementById('August').innerText = `${new Date(year, month, 1).getFullYear()}年 ${new Date(year, month, 1).getMonth()+1}月`;
+
+  //清空tbody,為了跑第二次而且要前面第一次紀錄可以刪掉
+  tbody.innerHTML = '';
+
+  //按下個月或是上個月可以改變title
+  document.getElementById('start').innerText = `${new Date(y, m).getFullYear()}年 ${new Date(y, m).getMonth()+1}月`;
 
   //創立新的tr跟td元素,然後td讓他跑出七個
   //這邊是處理第一列
@@ -66,14 +68,14 @@ function changemonth() {
 changemonth()
 
 
-function nextMonth()
-{
-  m++;
+//上個月
+function lastMonth() {
+  m--;
   changemonth();
 }
 
-function lastMonth()
-{
-  m--;
+//下個月
+function nextMonth() {
+  m++;
   changemonth();
 }
