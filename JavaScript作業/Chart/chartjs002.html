@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css"
+        integrity="sha512-/zs32ZEJh+/EO2N1b0PEdoA10JkdC3zJ8L5FTiQu82LR9S/rOQNfQN7U59U9BC12swNeRAz3HSzIL2vpp4fv3w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <style>
+        .col-6 h4 {
+            margin-left: 25px;
+            margin-top: 25px;
+        }
+
+        .showfail {
+            position: absolute;
+        }
+
+        .showfail p {
+            position: relative;
+            margin-left: 200px;
+            margin-top: -200px;
+            font-size: 60px;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 成品要有四個區域 -->
+    <div class="contain">
+        <div class="row">
+            <div class="col-6">
+                <h4>資料載入:成功</h4>
+                <canvas id="barChart1"></canvas>
+            </div>
+            <div class="col-6">
+                <h4>資料載入:失敗</h4>
+                <canvas id="barChart2"></canvas>
+                <div class="showfail">
+                    <p>載入失敗</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <h4>資料延遲載入：成功</h4>
+                <canvas id="barChart3"></canvas>
+            </div>
+            <div class="col-6">
+                <h4>資料更新</h4>
+                <canvas id="barChart4"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
+        integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg=="
+        crossorigin="anonymous"></script>
+    <script>
+        // 取得四個id的位置
+        let one = document.getElementById("barChart1")
+        let two = document.getElementById("barChart2")
+        let three = document.getElementById("barChart3")
+        let four = document.getElementById("barChart4")
+
+
+        // 開始用ajax方法把json檔抓下來放到最下面的圖表
+
+        //正確資料
+        var request = $.ajax({
+            url: "https://raw.githubusercontent.com/zo334411/FileStorage/master/chart_js",
+            method: "GET",
+            dataType: "json"
+        });
+
+        //錯誤資料
+        var request2 = $.ajax({
+            url: "zo334411/FileStorage/master/chart_js",
+            method: "GET",
+            dataType: "json"
+        });
+
+        //one(成功)
+        request.done(function (msg) {
+            myChart.data.labels = msg.labels;
+            myChart.data.datasets[0].data = msg.data;
+            myChart.update();
+        });
+
+
+        // (two)失敗
+        request2.fail(function () {
+            console.log("12345");
+            $(".showfail").show();
+        })
+
+        //(three)成功但延遲
+        request.done(function (msg3) {
+            let timeout;
+            timeout = setTimeout(function () {
+                myChart3.data.labels = msg3.labels;
+                myChart3.data.datasets[0].data = msg3.data;
+                myChart3.update();
+
+
+                clearTimeout(timeout);
+            },3000);
+        }) 
+
+
+
+        //(four)更新
+            request.done(function (msg4) {
+            myChart4.data.labels = msg4.labels;
+            myChart4.data.datasets[0].data = msg4.data;
+            myChart4.update();
+            let timeout2;
+            timeout2 = setTimeout(function () {
+                let newLabels = [
+                "台灣",
+                "美國",
+                "日本",
+                "泰國",
+                "琉球",
+                "紐西蘭",
+                "澳洲",
+            ];
+            let newData = [7, 10, 15, 7, 6, 3, 3];
+            myChart4.data.labels = newLabels;
+            myChart4.data.datasets[0].data = newData;
+            myChart4.update();
+
+            clearTimeout(timeout2);
+        }, 3000);
+    })
+
+
+        //一開始這邊不會有資料,要你用ajax方法把json檔抓下來
+        // var chartData = {
+        //     labels: ["美國", "日本", "泰國", "琉球", "紐西蘭", "澳洲"],
+        //     data: [8, 22, 13, 15, 17, 21]
+        // };
+
+        // var json = JSON.stringify(chartData)
+
+        // var chartData;
+
+
+        //(one)把資料抓下來放到下面的圖表上面,最終要有四個!
+        var myChart = new Chart(one, {
+            type: "bar",
+            data: {
+                labels:"",
+                datasets: [{
+                    label: '旅遊行程投票',
+                    data:"",
+                    backgroundColor:
+                        ['rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)'
+                        ],
+                    borderColor:
+                        ['rgba(255,99,132,1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }],
+                }
+            }
+        });
+
+
+        //(two)把資料抓下來放到下面的圖表上面,最終要有四個!
+        var myChart2 = new Chart(two, {
+            type: "bar",
+            data: {
+                labels: "",
+                datasets: [{
+                    label: '旅遊行程投票',
+                    data: "",
+                    backgroundColor:
+                        ['rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)'
+                        ],
+                    borderColor:
+                        ['rgba(255,99,132,1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }],
+                }
+            }
+        });
+
+        //(three)把資料抓下來放到下面的圖表上面,最終要有四個!
+        var myChart3 = new Chart(three, {
+            type: "bar",
+            data: {
+                labels: "",
+                datasets: [{
+                    label: '旅遊行程投票',
+                    data: "",
+                    backgroundColor:
+                        ['rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)'
+                        ],
+                    borderColor:
+                        ['rgba(255,99,132,1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }],
+                }
+            }
+        });
+
+        // (four)把資料抓下來放到下面的圖表上面,最終要有四個!
+        var myChart4 = new Chart(four, {
+            type: "bar",
+            data: {
+                labels: [],
+                datasets: [{
+                    label: '旅遊行程投票',
+                    data: [],
+                    backgroundColor:
+                        ['rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)'
+                        ],
+                    borderColor:
+                        ['rgba(255,99,132,1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }],
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
